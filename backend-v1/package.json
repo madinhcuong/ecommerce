@@ -1,0 +1,33 @@
+{
+  "name": "ecommerce-backend",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --watch '*'  --exec ts-node src/app.ts",
+    "start": "node dist/app.js",
+    "build": "tsc -p ."
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.13.0",
+    "axios": "^0.21.1",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.6.0",
+    "redis": "^3.1.2",
+    "sequelize": "^6.6.4"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.12",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^15.6.1",
+    "@types/redis": "^2.8.30",
+    "nodemon": "^2.0.7",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}

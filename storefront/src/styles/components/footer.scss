@@ -1,0 +1,43 @@
+.footer {
+  background-color: rgb(0, 2, 4);
+  padding: 15px 0px 15px 0px;
+
+  .container {
+    @include layout-center;
+    color: rgba(255, 255, 255, 0.7);
+
+    .name {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+    }
+
+    .link {
+      margin-bottom: 15px;
+
+      a {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+
+.copyright {
+  background-color: rgba(0, 2, 4, 0.9);
+
+  .container {
+    @include layout-center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+//--- responsive
+@media (max-width: $media-breakpoint-lg) {
+  .footer {
+    .container {
+      .name {
+        margin: 20px 0px;
+      }
+    }
+  }
+}

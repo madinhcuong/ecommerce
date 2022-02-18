@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  rabbitmq:
+    container_name: erp-rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports:
+        - 5672:5672
+        - 15672:15672
+    volumes:
+        - /mnt/erp-rabbitmq/data/:/rabbitmq-data
+        - /mnt/erp-rabbitmq/log/:/rabbitmq-log
+    networks:
+        - lusso-erp
+
+networks:
+  lusso-erp:

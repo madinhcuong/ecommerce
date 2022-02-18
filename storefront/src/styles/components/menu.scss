@@ -1,0 +1,47 @@
+.menu {
+  width: 100%;
+  color: #757575;
+  min-height: 325px;
+  font-size: $normal;
+
+  li {
+    .ant-menu-submenu-title {
+      margin: 0px !important;
+
+      .ant-menu-title-content {
+        text-transform: capitalize;
+      }
+
+      i {
+        display: none;
+      }
+    }
+  }
+}
+
+.ant-menu-submenu-placement-rightTop {
+  top: 85px !important;
+  margin-left: -10px !important;
+  padding-left: -10px !important;
+  z-index: 1;
+
+  ul {
+    min-height: 325px !important;
+  }
+}
+
+// Drak
+.menu-dark {
+  @include layout-center;
+
+  a {
+    font-size: 16px;
+    color: rgb(0, 2, 4);
+    opacity: 0.9;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

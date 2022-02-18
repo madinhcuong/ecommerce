@@ -1,0 +1,281 @@
+.header {
+  background-color: rgb(1, 127, 255);
+  .container {
+    @include layout-center;
+
+    .left-container {
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        background: none;
+        border-bottom: none;
+      }
+
+      img {
+        // width: 60px;
+        height: 40px;
+        display: block;
+      }
+
+      .icon-menu-mobile {
+        display: none;
+      }
+
+      .icon-cart-mobile {
+        display: none;
+      }
+    }
+
+    .right-container {
+      @include row-between;
+
+      .account {
+        @include row-center;
+        margin-left: 20px;
+        color: white;
+
+        .anticon-user {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+      }
+
+      .cart {
+        @include row-center;
+        color: white;
+
+        .ant-badge {
+          .anticon-shopping-cart {
+            font-size: 25px;
+            margin-right: 10px;
+            color: white;
+          }
+
+          sup {
+            right: 7px;
+            padding: 0 5px;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// theme DARK
+.header-dark {
+  .top-header {
+    background-color: rgb(32, 32, 32);
+    color: #fff;
+    .container {
+      @include layout-center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .text {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 65%;
+      }
+    }
+  }
+
+  .header {
+    background-color: rgb(255, 255, 255);
+    .container {
+      @include layout-center;
+
+      .logo {
+        width: 150px;
+        height: 100%;
+      }
+
+      .sign-in {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .search {
+        .ant-input {
+          font-size: 13px;
+          height: 45px;
+        }
+
+        .ant-input:hover {
+          border-color: #d9d9d9 !important;
+        }
+
+        .ant-input:focus {
+          border-color: #d9d9d9 !important;
+          box-shadow: none;
+        }
+
+        button {
+          height: 45px;
+          background: #fff;
+          border-color: #d9d9d9 !important;
+          font-size: 16px;
+          color: rgba(0, 0, 0, 0.85);
+          font-weight: 400;
+          box-shadow: none;
+          text-shadow: none;
+        }
+      }
+
+      .cart {
+        .ant-badge {
+          font-size: 30px;
+        }
+
+        sup {
+          padding: 3px;
+          height: 20px;
+          min-width: 20px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .header-mobile {
+    display: none;
+  }
+}
+
+//--- responsive
+@media (max-width: $media-breakpoint-lg) {
+  .header {
+    .container {
+      flex-direction: column !important;
+      align-items: unset !important;
+
+      .left-container {
+        align-items: center;
+
+        .icon-menu-mobile {
+          display: block;
+          span {
+            color: white;
+            font-size: 20px;
+          }
+        }
+
+        .icon-cart-mobile {
+          display: block;
+
+          .ant-badge {
+            right: 15px;
+
+            .anticon-shopping-cart {
+              color: white;
+              font-size: 22px;
+            }
+
+            sup {
+              padding: 0 5px;
+              line-height: 15px;
+            }
+          }
+        }
+
+        img {
+          margin-bottom: 10px;
+        }
+      }
+
+      .mid-container {
+        input {
+          height: 35px;
+        }
+        .ant-input-search-button {
+          height: 35px;
+        }
+      }
+
+      .right-container {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $media-breakpoint-lg) {
+  .header {
+    .container {
+      .left-container {
+        img {
+          width: 100px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  // header Mobile
+  .header-dark {
+    .header {
+      display: none;
+    }
+
+    .header-mobile {
+      display: inline;
+
+      .container {
+        @include layout-center;
+        border-bottom: 1px solid #e9ebee;
+
+        .logo {
+          width: 112px;
+          height: 100%;
+        }
+
+        .action {
+          .anticon-search {
+            font-size: 19px;
+          }
+
+          .anticon-shopping-cart {
+            font-size: 19px;
+            margin: 0px 0px 0px 20px;
+          }
+
+          .anticon-user {
+            font-size: 19px;
+            margin: 0px 20px;
+          }
+
+          .anticon-menu {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-drawer-content-wrapper {
+    width: 100% !important;
+  }
+
+  .drawer-menu {
+    .ant-drawer-title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #202020;
+      text-transform: capitalize;
+    }
+
+    .link {
+      margin-bottom: 15px;
+
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #202020;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
